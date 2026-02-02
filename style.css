@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
+.calendar-container {
+  width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  position: relative;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+}
+
+.calendar-header button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day-name {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  border-radius: 5px;
+}
+
+.date-cell {
+  height: 60px;
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 5px;
+  color: white;
+  overflow: hidden;
+}
+
+.date-cell.today {
+  border: 2px solid yellow;
+}
+
+.date-cell img.mark {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #fff;
+}
+
+.controls {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.controls input,
+.controls button {
+  padding: 5px;
+}
